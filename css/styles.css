@@ -148,6 +148,9 @@ body{
 }
 
 
+/*.curent{
+    background-image: url(../images/ikonky.svg#icon-hover);
+}*/
 /* .header-nav .link:active {
     color: #000000;
 }
@@ -802,7 +805,7 @@ fill: currentColor;
     background-color: var(--primary--white-color);
 }
 
-.botton-modal{
+.button-modal{
     position: absolute;
     display: flex;
     top: 8px;
@@ -811,12 +814,21 @@ fill: currentColor;
     height: 30px;
     justify-content: center;
     align-items: center;
-    border: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-    border-color: #FFFFFF;
+    cursor: pointer;
     background-color: #FFFFFF;      
-    
 }
+
+.modal-title{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.modal-text{
+    padding: 0 15px;
+}
+
 
 /*--     Potrfoliuo    --*/
 
