@@ -4,8 +4,10 @@
     --accent-color: #2196F3;
     --primary--white-color: #FFFFFF;
     --button-active-color: #188CEB; 
-    --iconka-links: #AFB1B8; 
+    --iconka-links: #AFB1B8;
+    --tran: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 h1,
 h2,
 h3,
@@ -137,11 +139,13 @@ body{
 
 .header-nav .link {
     position: relative;
+    padding: 32px 0;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.1428;
     letter-spacing: 0.02em;
-    color: var(--title-text-color);       
+    color: var(--title-text-color);
+    transition: color var(--tran);
 }
 
 .header-nav .link:hover,
@@ -158,14 +162,11 @@ body{
     display: block;
     width: 100%;
     height: 4px; 
-    top: 41px;   
+    bottom: 0px; 
     left: 0;
     background-color: var(--accent-color);    
     border-radius: 2px;
-    transform: translateY(100%);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
+    transition: background-color var(--tran);    
  }
 
    
@@ -181,13 +182,15 @@ body{
 
 
 .link-mail { 
-    display: flex;   
+    display: flex;
+    align-items: center;   
     font-weight: 500;
     font-size: 14px;
     line-height: 1.1428;
     letter-spacing: 0.02em;
     color: var(--primary-text-color);
-    align-items: center;
+    transition: color var(--tran);
+    
 }
 
 .link-mail:hover,
@@ -215,7 +218,9 @@ body{
     letter-spacing: 0.02em;
     text-transform: uppercase;
     color: var(--primary-text-color);
+    transition: color var(--tran);
 }
+
 .icon-tel{
     align-items: center;
     justify-content: center;
@@ -345,13 +350,15 @@ body{
     background-color: var(--accent-color);
     color: var(--primary--white-color); 
     cursor: pointer ;    
-    padding: 10px 32px;   
+    padding: 10px 32px;
+    transition: background-color var(--tran), color var(--tran);
 }
 
 
 .button-hero:hover,
 .button-hero:focus {
-    background-color: var(--button-active-color);
+   color: var(--accent-color);
+   background-color: var(--primary--white-color);
 }
 
 
@@ -566,11 +573,14 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: fill var(--tran), background-color var(--tran);
 }
 
 .teams-icon{
     fill: var(--iconka-links);
+    transition: fill var(--tran);
 }
+
 .teams-icon:hover,
 .teams-icon:focus{
     fill:var(--primary--white-color);
@@ -620,6 +630,7 @@ body{
     color: #AFB1B8;
     border-radius: 4px;
     border: 1px solid  #AFB1B8;
+    transition: color var(--tran), border var(--tran);
 } 
 
 .klient-link:hover,
@@ -690,6 +701,11 @@ fill: currentColor;
 
 }
 
+.footer-link li:not(:last-child){
+    margin-bottom: 9px;    
+}
+
+
 .item-footer {
     display: inline-block;
     font-weight: 400;
@@ -697,15 +713,15 @@ fill: currentColor;
     font-size: 14px;    
     line-height: 1.7142;
     letter-spacing: 0.03em;
-    color: var(--primary--white-color);    
+    color: var(--primary--white-color);
+    text-decoration: none;
+    transition: color var(--tran);   
 }
 
-.footer-link li:not(:last-child){
-    margin-bottom: 9px;
-    
-    
+.item-footer:hover,
+.item-footer:focus{
+    color: var(--button-active-color);
 }
-
 
 
 
@@ -718,8 +734,14 @@ fill: currentColor;
     letter-spacing: 0.03em;
     text-decoration: none;  
     color: rgba(255, 255, 255, 0.6);
-    
-}    
+    transition: color var(--tran);     
+} 
+
+.link-mail-footer:hover,
+.link-mail-footer:focus{
+    color: var(--button-active-color);
+}
+
 
 .link-tel-footer {
     font-weight: 400;
@@ -729,17 +751,11 @@ fill: currentColor;
     letter-spacing: 0.03em;
     text-decoration: none;
     color: rgba(255, 255, 255, 0.6);
+    transition: color var(--tran);
     
 }
 
-.item-footer:hover,
-.link-mail-footer:hover,
-.link-tel-footer:hover {
-    color: var(--button-active-color);
-}
-
-.item-footer:focus,
-.link-mail-footer:focus,
+.link-tel-footer:hover,
 .link-tel-footer:focus {
     color: var(--button-active-color);
 }
@@ -798,6 +814,7 @@ fill: currentColor;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color var(--tran);
 }
 
 
@@ -834,6 +851,7 @@ fill: currentColor;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity var(--tran);   
 }
 
 .modal{
@@ -866,10 +884,13 @@ fill: currentColor;
 .modal-title{
     display: flex;
     justify-content: center;
-    margin-bottom: 15px;
+    padding-top: 20px;
+    margin-bottom: 20px;
 }
 .modal-text{
-    padding: 0 15px;
+    padding-left:50px;
+    padding-right: 35px;
+    text-align: justify;
 }
 
 
@@ -898,6 +919,8 @@ fill: currentColor;
     border-radius: 4px;
     color: var(--title-text-color);
     cursor: pointer;
+    transition:  background-color var(--tran), color var(--tran),
+    box-shadow var(--tran), border-radius var(--tran) ;
 }
 
 
