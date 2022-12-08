@@ -162,7 +162,7 @@ body{
     display: block;
     width: 100%;
     height: 4px; 
-    bottom: 0px; 
+    bottom: -1px; 
     left: 0;
     background-color: var(--accent-color);    
     border-radius: 2px;
@@ -251,16 +251,6 @@ body{
     
 
 
-
-/*.auth-nav {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.1428;
-    letter-spacing: 0.02em;
-    color: var(--accent-color);
-    text-decoration: none;
-}
-
 /*-----------------------Header--------------------*/
 
 
@@ -274,7 +264,7 @@ body{
 /*--------------Hero-------------*/
 .hero {
     max-width: 1600px;
-    height: 600px;
+    background-size: cover;
     margin: 0 auto;
     background-color: #2F303A;
     background-image: linear-gradient(
@@ -306,34 +296,6 @@ body{
     margin:0 auto;
     margin-bottom:  30px;
 }
-
-
-/*Buttom*/
-/*
-.button{
-    color: var(--title-text-color);
-    background-color: var(--primary--white-color);
-}
-.button.primary {
-    color: var(--primary--white-color);
-    background-color: var(--accent-color);
-}
-.button.secondary{
-    color: var(--accent-color);
-    background-color: var(--primary--white-color);
-}
-
-.button: hover,
-.button: footer {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.625;
-    letter-spacing: 0.03em;
-    color: var(--title-text-color);
-    background: var(--button-active-color) ;
-}*/
-
-
 
 
 
@@ -397,15 +359,7 @@ body{
 }
 
 /*---------------Переваги---------------*/
-/*.feature-list .title {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.1428px;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--title-text-color);
-}
-*/
+
 .section,
 .portfolio {
     padding: 94px 0;
@@ -481,18 +435,19 @@ body{
     position: relative;
 }
 
-.ptofile-text{
+.profile-text{
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
+    left: 0;
     bottom: 0;
     width: 100%;
     height: 70px;
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 1.1428;
     text-align: center;
     letter-spacing: 0.03em;
     text-transform: uppercase;
@@ -533,7 +488,7 @@ body{
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 1,1875;
+    line-height: 1.1875;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--title-text-color);    
@@ -603,7 +558,7 @@ body{
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
-    line-height: 1,1666;
+    line-height: 1.1666;
     text-align: center;
     letter-spacing: 0.03em;    
     color: var(--title-text-color);
@@ -778,7 +733,7 @@ fill: currentColor;
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
-    line-height: 1,1428;
+    line-height: 1.1428;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--primary--white-color);
@@ -1007,8 +962,10 @@ fill: currentColor;
 
 .portfolio-text {
     position: absolute;
-    top: 0;    
-    padding: 63px 24px;    
+    top: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;    
     height: 100%;
     background-color: rgba(33, 150, 243, 0.9);   
     font-style: normal;
